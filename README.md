@@ -7,11 +7,19 @@
 - Tailwind CSS
 - Axios
 
-### Limitations
+### Current Limitations
 
 - New `id`s are determined by taking the last patient in the list's `id` and adding 1. `id`s could collide if the `id`s are unsorted.
 - No input validation error messages in the web form.
 - Calculating average RAF scores for Task 4 does not validate that the patient risk profiles are associated with patients contained in the patient profiles list, nor does it account for possible duplicate entries of a segment for a single patient.
+
+### Future Steps
+
+- Use a real database instead of the mock database file.
+- The code currently loads every item of the database then manipulates them. It's likely we'd want to query for specific data with each call once the size of the database is production-scale.
+- Add routes to update the database, not just store new data in-memory.
+- Indicate error, loading, and empty states in UI.
+- Address the above limitations.
 
 ## Coding Exercise
 
