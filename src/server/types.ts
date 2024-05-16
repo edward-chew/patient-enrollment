@@ -1,5 +1,5 @@
-type EnrollmentStatus =
-  "Prospect"
+export type EnrollmentStatus =
+  | "Prospect"
   | "Insurance Eligibility Verified"
   | "Enrolled Contract Sent"
   | "Enrolled Contract Signed"
@@ -10,9 +10,18 @@ export type Patient = {
   id: number;
   name: string;
   enrollmentStatus: EnrollmentStatus;
-}
+};
 
-type RiskProfileSegment = "CFA" | "CFD" | "CNA" | "CND" | "CPA" | "CPD" | "INS" | "NE" | "SNPNE";
+type RiskProfileSegment =
+  | "CFA"
+  | "CFD"
+  | "CNA"
+  | "CND"
+  | "CPA"
+  | "CPD"
+  | "INS"
+  | "NE"
+  | "SNPNE";
 
 export type PatientRiskProfile = {
   demographicCoefficients?: number[];
@@ -20,4 +29,4 @@ export type PatientRiskProfile = {
   segmentDescription: string;
   segmentName: RiskProfileSegment;
   patientId: number;
-}
+};

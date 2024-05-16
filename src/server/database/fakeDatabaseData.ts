@@ -10,7 +10,7 @@ export const patients = [
     id: 1002,
     name: "Jane Doe",
     enrollmentStatus: "Insurance Eligibility Verified",
-  }
+  },
 ] satisfies Patient[];
 
 export const patientRiskProfiles = [
